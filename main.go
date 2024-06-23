@@ -26,6 +26,15 @@ import (
 )
 
 /*
+=======
+func main() {
+	p := tea.NewProgram(nil)
+	if _, err := p.Run(); err != nil {
+		os.Exit(1)
+	}
+}
+
+>>>>>>> Stashed changes
 type errMsg error
 
 type model struct {
@@ -85,6 +94,13 @@ func (m model) View() string {
 
 func main() {
 	p := tea.NewProgram(model.New())
+	if _, err := p.Run(); err != nil {
+		log.Fatalln(err)
+	}
+}
+
+func sampleMain() {
+	p := tea.NewProgram(initialModel())
 	if _, err := p.Run(); err != nil {
 		log.Fatalln(err)
 	}
